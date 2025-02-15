@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reading Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Reading Calendar</h1>
+        <div class="calendar">
+            <div class="header">
+                <button id="prev">❮</button>
+                <h2 id="monthYear"></h2>
+                <button id="next">❯</button>
+            </div>
+            <div>
+                <label for="yearSelect">Select Year:</label>
+                <select id="yearSelect"></select>
+                <label for="monthSelect">Select Month:</label>
+                <select id="monthSelect"></select>
+            </div>
+            <div class="month-container"></div>
+        </div>
+    </div>
+
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Add Task</h2>
+            <input type="text" id="taskInput" placeholder="Enter your task here">
+            <input type="text" id="timeInput" placeholder="Enter time (e.g., 10:00 AM)">
+            <button onclick="saveTask()">Save Task</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

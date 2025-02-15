@@ -1,0 +1,194 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('images.jpg'); /* Use a valid image URL */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.5); /* White background with transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #613030;
+    margin-bottom: 20px;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #54307a, #3f0a0d); /* Gradient background */
+    color: white;
+    padding: 15px; /* Increased padding for a more spacious look */
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.header h2 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+}
+
+.header button {
+    background: linear-gradient(90deg, #f8cd10, #de4c4f); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    padding: 10px 20px; /* Increased padding for buttons */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Added box-shadow transition */
+}
+
+.header button:hover {
+    background: linear-gradient(90deg, #de4c4f, #ff6f61); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+}
+
+.month-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.month {
+    width: 48%;
+    margin-bottom: 20px;
+    background-color: #f08a5d; /* Light warm color */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.month-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #90d6f9; /* Teal */
+    margin-bottom: 10px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    background: #ffffff; /* White */
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.day:hover {
+    background: #ffe082; /* Light yellow */
+}
+
+.task-list {
+    margin-top: 5px;
+    font-size: 0.8em;
+    color: #555;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Rounded corners for modal */
+    border-radius: 10px; /* Rounded corners for modal */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.close {
+    color: #aaa; /* Light gray for close button */
+    float: right; /* Align to the right */
+    font-size: 28px; /* Larger font size */
+    font-weight: bold; /* Bold text */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Change color on hover */
+    text-decoration: none; /* No underline */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.footer {
+    text-align: center; /* Centered text */
+    margin-top: 20px; /* Space above footer */
+    font-size: 0.9em; /* Slightly smaller font */
+    color: #777; /* Gray color for footer text */
+}
+
+.footer a {
+    color: #2575fc; /* Link color */
+    text-decoration: none; /* No underline */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+@media (max-width: 600px) {
+    .month {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .header {
+        flex-direction: column; /* Stack header elements */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .header h2 {
+        margin-bottom: 10px; /* Space below title */
+    }
+
+    .header button {
+        width: 100%; /* Full width buttons */
+        margin-top: 10px; /* Space above buttons */
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+    }
+    to {
+        opacity: 1; /* End fully opaque */
+    }
+}
+
+.modal-content {
+    animation: fadeIn 0.5s; /* Fade-in effect for modal */
+}
