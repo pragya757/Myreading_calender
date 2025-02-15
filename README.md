@@ -7,11 +7,11 @@ My Reading Calendar is a beautifully designed calendar application that helps us
 🎨 Elegant UI – Aesthetic background and smooth user experience.
 🔄 Month & Year Navigation – Switch between different months and years easily.
 📖 Reading Tracking – Keep track of reading days with a simple and intuitive interface.
-🛠 Technologies Used
-
+🛠️ Technologies Used
 Frontend: HTML, CSS, JavaScript
-Styling: Custom CSS
-
+Frameworks: React.js (if applicable)
+Styling: Tailwind CSS / Custom CSS
+State Management: React State / Context API (if applicable)
 
 
 ![image](https://github.com/user-attachments/assets/1c71c7f2-ed7c-4388-a758-00b934daffa9)
